@@ -10,7 +10,7 @@ test('Buscar', async ({page})=>{
 
   const products = await page.locator(".ui-search-layout__item").allInnerTexts()
   console.log('the total of products is: ', products.length);
-
+//comentario
   for (const product of products){
      console.log('the title is: ', product);
       
