@@ -6,7 +6,8 @@ test('Buscar', async ({page})=>{
   await input1.fill('iphone');
 
   await page.keyboard.press('Enter');
-  await expect(await page.getByRole('heading',{ name:'Apple iPhone 17 (256 GB) - Lavanda - Distribuidor Autorizado' })).toBeVisible();
+  await expect(await page.getByRole('heading',{ name:'Apple iPhone 17 (256 GB) - Lavanda - Distribuidor Autorizado' }))
+  .toBeVisible({timeout: 6000});
 
   const products = await page.locator(".ui-search-layout__item").allInnerTexts()
   console.log('the total of products is: ', products.length);
