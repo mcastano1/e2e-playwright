@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+node_modules/
+playwright-report/
+
 # Log file
 *.log
 
